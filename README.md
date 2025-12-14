@@ -1,4 +1,4 @@
-# 🛡️ AI Network Intrusion Detection System (NIDS)
+# CD-AHAL: Concept Drift Aware Hybrid Active Learning for NIDS
 
 ## 📖 Giới thiệu
 Dự án xây dựng hệ thống phát hiện xâm nhập mạng (NIDS) sử dụng Deep Learning, tập trung vào khả năng xử lý dữ liệu luồng (Streaming Data) và thích nghi với Concept Drift. Hệ thống tích hợp pipeline từ tiền xử lý dữ liệu, training offline, đến giả lập môi trường Streaming với Kafka.
