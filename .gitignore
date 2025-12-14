@@ -1,0 +1,25 @@
+# Bỏ qua môi trường ảo (giảm được vài GB)
+venv/
+.venv/
+env/
+__pycache__/
+
+# Bỏ qua Datasets (Nguyên nhân chính gây nặng)
+datasets/
+data/
+*.csv
+*.pcap
+*.zip
+*.rar
+
+# Bỏ qua Model Weights (nếu nặng > 100MB)
+*.h5
+*.pt
+*.pth
+*.keras
+models/
+
+# File hệ thống/IDE
+.DS_Store
+.idea/
+.vscode/

@@ -1,0 +1,20 @@
+=== REPORT: Phase2_Multiclass_Initial ===
+Accuracy: 0.7404
+Precision: 0.7421
+Recall: 0.7404
+F1-Score: 0.6765
+
+              precision    recall  f1-score   support
+
+      Normal     0.0000    0.0000    0.0000         0
+         DoS     0.7608    0.1460    0.2449     93720
+    PortScan     0.2500    0.0004    0.0008      2349
+      Botnet     0.8326    0.5028    0.6270     24518
+  BruteForce     0.0000    0.0000    0.0000      1192
+   WebAttack     0.0000    0.0000    0.0000       153
+Infiltration     0.0000    0.0000    0.0000        47
+        DDoS     0.7356    0.9776    0.8395    271049
+
+    accuracy                         0.7404    393028
+   macro avg     0.3224    0.2033    0.2140    393028
+weighted avg     0.7421    0.7404    0.6765    393028

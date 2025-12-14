@@ -1,0 +1,4 @@
+=== FINAL STREAMING REPORT ===
+
+--- BINARY ---
+Acc: 0.5117, Prec: 0.4147, Rec: 0.9527, F1: 0.5779

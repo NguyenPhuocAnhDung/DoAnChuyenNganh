@@ -1,0 +1,14 @@
+=== REPORT: Phase1_Binary_Initial ===
+Accuracy: 0.9948
+Precision: 0.9986
+Recall: 0.9939
+F1-Score: 0.9963
+
+              precision    recall  f1-score   support
+
+      Normal     0.9862    0.9969    0.9915    170909
+      Attack     0.9986    0.9939    0.9963    393028
+
+    accuracy                         0.9948    563937
+   macro avg     0.9924    0.9954    0.9939    563937
+weighted avg     0.9949    0.9948    0.9948    563937
