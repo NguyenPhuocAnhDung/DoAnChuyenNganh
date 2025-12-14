@@ -3,6 +3,9 @@
 ## 📖 Giới thiệu
 Dự án xây dựng hệ thống phát hiện xâm nhập mạng (NIDS) sử dụng Deep Learning, tập trung vào khả năng xử lý dữ liệu luồng (Streaming Data) và thích nghi với Concept Drift. Hệ thống tích hợp pipeline từ tiền xử lý dữ liệu, training offline, đến giả lập môi trường Streaming với Kafka.
 
+## Dataset
+Link: ```(https://drive.google.com/file/d/1oFByJODMDo3jw5POQUGjMULs-MJVhNhq/view?usp=drive_link)```
+
 ## 🏗️ Cấu trúc dự án
 Dự án được tổ chức theo cấu trúc module hóa:
 
