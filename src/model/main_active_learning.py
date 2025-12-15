@@ -23,9 +23,10 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 # 1. CẤU HÌNH HỆ THỐNG
 # ==========================================
 DATA_PATH = "../../dataset/processed/processedstreamvs2.4"
-PLOT_PATH = "../../baocao/main_ative_learning/plots" 
-MODEL_PATH = "../../baocao/main_ative_learning/models"
-REPORT_PATH = "../../baocao/main_ative_learning/reports"
+# [LƯU Ý] Kiểm tra lại đường dẫn này cho khớp với máy bạn (active hay ative)
+PLOT_PATH = "../../baocao/main_active_learning/plots" 
+MODEL_PATH = "../../baocao/main_active_learning/models"
+REPORT_PATH = "../../baocao/main_active_learning/reports"
 
 # Tạo thư mục nếu chưa có
 for p in [PLOT_PATH, MODEL_PATH, REPORT_PATH]:
@@ -400,14 +401,14 @@ def main():
     controller = DynamicController(base_lr=1e-5, base_thresh=3.0)
     opt_A = keras.optimizers.Adam(learning_rate=1e-5); opt_B = keras.optimizers.Adam(learning_rate=1e-5)
     
-    # [FIX 1] Bổ sung 'f1' và 'latency' vào dictionary theo dõi
+    # [ADD] Thêm 'acc_static' vào đây
     stream_history = {
         'batch': [],
         'acc_dynamic': [],
-        'acc_static': [],
+        'acc_static': [],   # <--- BỔ SUNG
         'unc': [],
-        'f1': [],       # Thêm mới
-        'latency': []   # Thêm mới
+        'f1': [],      
+        'latency': []   
     }
     drift_indices = []
 
@@ -443,10 +444,10 @@ def main():
         # --- C. LOGGING DATA ---
         stream_history['batch'].append(i)
         stream_history['acc_dynamic'].append(acc_dyn)
-        stream_history['acc_static'].append(acc_stat)
+        stream_history['acc_static'].append(acc_stat) # <--- LOG THÊM
         stream_history['unc'].append(unc)
-        stream_history['f1'].append(f1_dyn)        # Lưu F1
-        stream_history['latency'].append(batch_latency) # Lưu Latency
+        stream_history['f1'].append(f1_dyn)      
+        stream_history['latency'].append(batch_latency) 
 
         # Multiclass Prediction (Dynamic)
         idx_p = np.where(pred_bin == 1)[0]
@@ -542,6 +543,7 @@ def main():
     df_compare = pd.DataFrame({
         'batch': stream_history['batch'],
         'accuracy': stream_history['acc_dynamic'],
+        'accuracy_static': stream_history['acc_static'], # <--- BỔ SUNG
         'f1': stream_history['f1'],
         'latency': stream_history['latency']
     })
