@@ -15,7 +15,7 @@ Dự án được tổ chức theo cấu trúc module hóa:
     * `demo_kafka/`: Giả lập hệ thống Real-time với Producer/Consumer (`consumer.py`, `producer.py`).
     * `sosanhchiso/`: Scripts vẽ biểu đồ và so sánh hiệu năng các model.
 * **`dataset/`**:
-    * `processedstreamvs2.4/`: Dữ liệu đã tiền xử lý dạng Parquet.
+    * `processed_v3_unified/`: Dữ liệu đã tiền xử lý dạng Parquet.
     * `raw/`: Dữ liệu thô (CIC-IDS, UNSW-NB15...).
 * **`baocao/` & `results/`**: Lưu trữ biểu đồ (Plots), Confusion Matrix và báo cáo kết quả so sánh.
 
