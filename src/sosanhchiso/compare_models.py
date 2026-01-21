@@ -9,7 +9,7 @@ from matplotlib.gridspec import GridSpec
 # 1. CẤU HÌNH ĐƯỜNG DẪN
 # ==========================================
 BASE_PATH = "../../baocao"
-OUTPUT_PATH = "../../baocao/FINAL_COMPARISON1"
+OUTPUT_PATH = "../../baocao/FINAL_COMPARISON_RESULTS"
 
 if not os.path.exists(OUTPUT_PATH):
     os.makedirs(OUTPUT_PATH)
@@ -17,8 +17,8 @@ if not os.path.exists(OUTPUT_PATH):
 # Mapping file CSV History
 FILES_MAPPING = {
     "main_training/plots/history_general_training.csv": "Baseline (CNN-GRU)",
-    "main_ative_learning/plots/history_active_learning.csv": "Baseline + Active Learning",
-    "main_cnn_gru_attention/plots/history_cnn_gru_attention.csv": "CNN-GRU-Attention + AL",
+    "main_ative_learning/reports/final_summary_results.csv": "CD_AHAL",
+    # "main_cnn_gru_attention/plots/history_cnn_gru_attention.csv": "CNN-GRU-Attention + AL",
     "main_cnn_attention/plots/history_cnn_attention_pure.csv": "CNN-Attention Pure",
     "main_cnn_attention_ative_learning/plots/history_cnn_attention_AL.csv": "CNN-Attention + AL"
 }
