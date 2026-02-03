@@ -17,7 +17,7 @@ from tabulate import tabulate
 # ==========================================
 # 1. CẤU HÌNH & IMPORT
 # ==========================================
-DATA_PATH = "D:/DoAnChuyenNganh/dataset/processed_v3_unified"
+DATA_PATH = "../../../dataset/processed_v3_unified"
 BASE_OUTPUT = "../../../baocao/CD_AHAL_FINAL_FULL_METRICS_FINAL"
 MODEL_PATH = os.path.join(BASE_OUTPUT, "models")
 REPORT_PATH = os.path.join(BASE_OUTPUT, "reports_stream")
